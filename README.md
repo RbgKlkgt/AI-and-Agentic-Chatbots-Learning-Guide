@@ -11,3 +11,7 @@ python run.py
 ```bash
 npm run dev
 ```
+
+
+docker compose up --build
+
