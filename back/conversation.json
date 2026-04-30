@@ -1,0 +1,30 @@
+{
+  "string": [
+    {
+      "role": "user",
+      "content": "comment ca va ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Je vais très bien, merci de demander ! 😊 Et toi, comment ça va aujourd'hui ? 🚀"
+    }
+  ],
+  "2": [
+    {
+      "role": "user",
+      "content": "tu me recois ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Oui, je t'entends ! 😊\nComment puis-je t'aider aujourd'hui ?"
+    },
+    {
+      "role": "user",
+      "content": "quelle est le president du zaire ?\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Le dernier président du **Zaïre** (ancien nom de la République démocratique du Congo) était **Mobutu Sese Seko**, qui a dirigé le pays de **1965 à 1997**.\n\nIl a été renversé lors de la **Première guerre du Congo** en 1997, et le Zaïre est redevenu la **République démocratique du Congo (RDC)** sous la présidence de **Laurent-Désiré Kabila**.\n\nTu cherches des infos sur une période précise ? 😊"
+    }
+  ]
+}
