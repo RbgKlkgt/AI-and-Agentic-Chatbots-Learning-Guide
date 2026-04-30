@@ -4,7 +4,7 @@
 
 **Back** (depuis le dossier `back`) :
 ```bash
-uv run uvicorn main:app --reload
+python run.py
 ```
 
 **Front** (depuis le dossier `front`) :
