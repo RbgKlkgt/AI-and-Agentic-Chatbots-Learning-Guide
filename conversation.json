@@ -1,0 +1,38 @@
+{
+  "1": [
+    {
+      "role": "user",
+      "content": "Bonjour"
+    },
+    {
+      "role": "assistant",
+      "content": "Bonjour !"
+    }
+  ],
+  "2": [
+    {
+      "role": "user",
+      "content": "Quel temps fait-il ?"
+    }
+  ],
+  "3": [
+    {
+      "role": "user",
+      "content": "bonjour test"
+    },
+    {
+      "role": "assistant",
+      "content": "réponse par défaut, pas encore de LLM connecté"
+    }
+  ],
+  "4": [
+    {
+      "role": "user",
+      "content": "bonjour test"
+    },
+    {
+      "role": "assistant",
+      "content": "réponse par défaut, pas encore de LLM connecté"
+    }
+  ]
+}

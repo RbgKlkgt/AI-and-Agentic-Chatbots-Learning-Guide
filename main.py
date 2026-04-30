@@ -1,15 +1,31 @@
 import csv
-from typing import Optional
+import json
+from typing import Optional, Literal, List
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class Client(BaseModel):
     id: Optional[int] = None
     first_name: str
     last_name: str
     account: int
+
+class Message(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str
+
+class PromptRequest(BaseModel):
+    user_question: str
 
 def read_clients():
     try:
@@ -30,6 +46,17 @@ def write_clients(clients):
         writer.writeheader()
         for client in clients:
             writer.writerow(client)
+
+def read_conversations():
+    try:
+        with open("conversation.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+def write_conversations(conversations):
+    with open("conversation.json", "w", encoding="utf-8") as f:
+        json.dump(conversations, f, ensure_ascii=False, indent=2)            
 
 @app.get("/clients")
 def get_clients():
@@ -75,3 +102,45 @@ def delete_client(client_id: int):
             write_clients(clients)
             return {"message": "Client deleted"}
     raise HTTPException(status_code=404, detail="Client not found")
+
+
+@app.post("/accept_prompt")
+def accept_prompt(payload: PromptRequest):
+    conversations = read_conversations()
+
+    conversation_id = str(max((int(k) for k in conversations.keys()), default=0) + 1)
+    conversations[conversation_id] = []
+
+    conversations[conversation_id].append({
+        "role": "user",
+        "content": payload.user_question,
+    })
+
+    default_reply = "réponse par défaut, pas encore de LLM connecté"
+    conversations[conversation_id].append({
+        "role": "assistant",
+        "content": default_reply,
+    })
+
+    write_conversations(conversations)
+
+    return {"response": default_reply}
+
+
+@app.get("/prompts/{id}")
+def get_historical(id: int):
+    conversations = read_conversations()
+    historical = []
+    for key in sorted(conversations.keys(), key=lambda x: int(x)):
+        conversation_id = int(key)
+        if conversation_id > id:
+            break
+        messages = conversations.get(key, [])
+        if not messages:
+            continue
+        historical.append({
+            "conversation_id": conversation_id,
+            "messages": messages,
+        })
+
+    return {"prompts": historical}
