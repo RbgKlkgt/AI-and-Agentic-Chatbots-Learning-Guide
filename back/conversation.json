@@ -1,40 +1,196 @@
 {
-  "string": [
-    {
-      "role": "user",
-      "content": "comment ca va ?"
-    },
-    {
-      "role": "assistant",
-      "content": "Je vais très bien, merci de demander ! 😊 Et toi, comment ça va aujourd'hui ? 🚀"
-    }
-  ],
-  "2": [
-    {
-      "role": "user",
-      "content": "tu me recois ?"
-    },
-    {
-      "role": "assistant",
-      "content": "Oui, je t'entends ! 😊\nComment puis-je t'aider aujourd'hui ?"
-    },
-    {
-      "role": "user",
-      "content": "quelle est le president du zaire ?\n"
-    },
-    {
-      "role": "assistant",
-      "content": "Le dernier président du **Zaïre** (ancien nom de la République démocratique du Congo) était **Mobutu Sese Seko**, qui a dirigé le pays de **1965 à 1997**.\n\nIl a été renversé lors de la **Première guerre du Congo** en 1997, et le Zaïre est redevenu la **République démocratique du Congo (RDC)** sous la présidence de **Laurent-Désiré Kabila**.\n\nTu cherches des infos sur une période précise ? 😊"
-    }
-  ],
-  "3": [
-    {
-      "role": "user",
-      "content": "yo\n"
-    },
-    {
-      "role": "assistant",
-      "content": "Yo! What's good? 😎 How can I help you today?"
-    }
-  ]
+  "1": {
+    "1": [
+      {
+        "role": "user",
+        "content": "comment ca va ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Je vais très bien, merci de demander ! 😊 Et toi, comment ça va aujourd'hui ? 🚀"
+      }
+    ]
+  },
+  "2": {
+    "1": [
+      {
+        "role": "user",
+        "content": "tu me recois ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Oui, je t'entends ! 😊\nComment puis-je t'aider aujourd'hui ?"
+      }
+    ],
+    "2": [
+      {
+        "role": "user",
+        "content": "quelle est le president du zaire ?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "Le dernier président du **Zaïre** (ancien nom de la République démocratique du Congo) était **Mobutu Sese Seko**, qui a dirigé le pays de **1965 à 1997**.\n\nIl a été renversé lors de la **Première guerre du Congo** en 1997, et le Zaïre est redevenu la **République démocratique du Congo (RDC)** sous la présidence de **Laurent-Désiré Kabila**.\n\nTu cherches des infos sur une période précise ? 😊"
+      }
+    ]
+  },
+  "3": {
+    "1": [
+      {
+        "role": "user",
+        "content": "yo\n"
+      },
+      {
+        "role": "assistant",
+        "content": "Yo! What's good? 😎 How can I help you today?"
+      }
+    ]
+  },
+  "4": {
+    "1": [
+      {
+        "role": "user",
+        "content": "hello ca va \n"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello! 😊 Oui, ça va bien, merci ! Et toi, comment ça va ? 😊\n\n(Translation: Hello! 😊 Yes, I'm doing well, thanks! And you, how are you? 😊)"
+      }
+    ],
+    "2": [
+      {
+        "role": "user",
+        "content": "ca va merci\n"
+      },
+      {
+        "role": "assistant",
+        "content": "Super ! 😊\nSi tu as des questions ou besoin d'aide, n'hésite pas. Bonne journée ! 🌟"
+      }
+    ],
+    "3": [
+      {
+        "role": "user",
+        "content": "qu'est ce que j'ai dit avant ? \n"
+      },
+      {
+        "role": "assistant",
+        "content": "Tu m'as dit : **\"ça va merci\"** 😊"
+      }
+    ],
+    "4": [
+      {
+        "role": "user",
+        "content": "et encore avant ?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "Avant ça, tu m'avais dit :\n**\"hello ca va\"** 😊"
+      }
+    ]
+  },
+  "5": {
+    "1": [
+      {
+        "role": "user",
+        "content": "bonjour"
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour ! 😊 Comment puis-je vous aider aujourd'hui ?"
+      }
+    ],
+    "2": [
+      {
+        "role": "user",
+        "content": "ca va merci"
+      },
+      {
+        "role": "assistant",
+        "content": "Super ! 😊 Moi aussi, je suis en pleine forme, merci de demander !\n\nSi vous avez une question ou besoin d'aide, n'hésitez pas à me le dire. Bonne journée ! 🚀✨"
+      }
+    ],
+    "3": [
+      {
+        "role": "user",
+        "content": "quelle est la capital de paris"
+      },
+      {
+        "role": "assistant",
+        "content": "La capitale de la **France** est **Paris** !\n\n*(Si vous pensiez à une autre question, n'hésitez pas à préciser !)* 😊"
+      }
+    ],
+    "4": [
+      {
+        "role": "user",
+        "content": "mon premeir message c'est"
+      },
+      {
+        "role": "assistant",
+        "content": "Ah, je vois ! Votre premier message était juste :\n**\"bonjour\"** 😄\n\nEt moi, je vous ai répondu :\n*\"Bonjour ! 😊 Comment puis-je vous aider aujourd'hui ?\"*\n\nUn classique, mais efficace pour commencer une conversation ! 😉\n\nBesoin d'aide sur un autre sujet ? 🚀"
+      }
+    ],
+    "5": [
+      {
+        "role": "user",
+        "content": "a"
+      },
+      {
+        "role": "assistant",
+        "content": "A... tout court ? 😄\n\nSi vous cherchez quelque chose en particulier avec cette lettre, dites-le-moi ! Sinon, je peux aussi vous proposer des mots commençant par **A** :\n- **Amour**\n- **Aventure**\n- **Art**\n- **Ami(e)**\n- **Amiibo** (pour les fans de Nintendo 😉)\n\nOu peut-être une énigme ? 🧩\n\nÀ vous de jouer ! 🎲"
+      }
+    ]
+  },
+  "6": {
+    "1": [
+      {
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello! 😊 How can I assist you today? Let me know what you need help with!"
+      }
+    ],
+    "2": [
+      {
+        "role": "user",
+        "content": "ca va  ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Ça va très bien, merci ! 😊 Et toi, comment ça va ? (How are you?)"
+      }
+    ],
+    "3": [
+      {
+        "role": "user",
+        "content": "afffiche moi notre discussion précente, on parlait d'une ville non ?"
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis désolé, mais je n'ai pas de mémoire des conversations précédentes dans cette session. Si tu te souviens du sujet ou d'un détail, je peux t'aider à le retrouver ! 😊\n\nSinon, on peut reprendre là où tu veux. Par exemple, parlons des villes que tu aimes ou que tu aimerais visiter ! 🌍✨"
+      }
+    ]
+  },
+  "7": {
+    "1": [
+      {
+        "role": "user",
+        "content": "gugentag"
+      },
+      {
+        "role": "assistant",
+        "content": "**Guten Tag !** 😊 (Bonjour en allemand)\n\nTu veux que je t'aide à apprendre quelques mots en allemand, ou tu cherches autre chose ? 🌟\n\n*(Et si c'était une faute de frappe pour \"Bonjour\" ou autre, dis-le-moi !)* 😄"
+      }
+    ],
+    "2": [
+      {
+        "role": "user",
+        "content": "rappelle moi notre cenverstaion precedente"
+      },
+      {
+        "role": "assistant",
+        "content": "Voici un résumé de notre conversation précédente (dans cette session) :\n\n1. **Ton premier message** :\n   - *\"bonjour\"*\n   - Ma réponse : *\"Bonjour ! 😊 Comment puis-je vous aider aujourd'hui ?\"*\n\n2. **Ensuite** :\n   - *\"ca va merci\"*\n   - *\"Super ! 😊 Moi aussi, je suis en pleine forme...\"*\n\n3. **Puis** :\n   - *\"quelle est la capital de paris\"* → *\"La capitale de la France est Paris !\"*\n\n4. **Et enfin** :\n   - *\"mon premeir message c'est\"* → Confirmation que c'était *\"bonjour\"*\n\n---\nTu veux qu’on approfondisse un sujet en particulier ? 😊\n*(Ou peut-être que tu cherches autre chose ?)*"
+      }
+    ]
+  }
 }

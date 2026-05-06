@@ -41,15 +41,27 @@ def _write_conversations(data: dict) -> None:
 def save_user_message(conversation_id: str, prompt: str) -> None:
     data = _read_conversations()
     if conversation_id not in data:
-        data[conversation_id] = []
-    data[conversation_id].append({"role": "user", "content": prompt})
+        data[conversation_id] = {}
+    exchanges = data[conversation_id]
+    exchange_id = str(len(exchanges) + 1)
+    exchanges[exchange_id] = [{"role": "user", "content": prompt}]
     _write_conversations(data)
 
 
 def save_assistant_message(conversation_id: str, response: str) -> None:
     data = _read_conversations()
-    data[conversation_id].append({"role": "assistant", "content": response})
+    exchanges = data[conversation_id]
+    last_exchange_id = str(len(exchanges))
+    exchanges[last_exchange_id].append({"role": "assistant", "content": response})
     _write_conversations(data)
+
+
+def build_history(data: dict) -> list[dict]:
+    history = []
+    for conv_id in sorted(data.keys(), key=int):
+        for exchange_id in sorted(data[conv_id].keys(), key=int):
+            history.extend(data[conv_id][exchange_id])
+    return history
 
 
 def get_agent_response(history: list[dict]) -> str:
@@ -71,7 +83,7 @@ def chat(request: ChatRequest):
     save_user_message(conversation_id, request.prompt)
 
     updated_data = _read_conversations()
-    history = updated_data[conversation_id]
+    history = build_history(updated_data)
 
     response = get_agent_response(history)
     save_assistant_message(conversation_id, response)
